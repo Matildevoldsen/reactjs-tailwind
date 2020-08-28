@@ -1,7 +1,10 @@
-const tailwindcss = require('tailwindcss');
 module.exports = {
     plugins: [
-        tailwindcss('./tailwind.js'),
-        require('autoprefixer')
-    ],
-};
+        require('postcss-import'),
+        require('tailwindcss'),
+        require('autoprefixer'),
+        require('postcss-nested'),
+        require('postcss-custom-properties'),
+        require('postcss-discard-comments')
+    ]
+}
