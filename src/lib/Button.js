@@ -1,22 +1,42 @@
-import React from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 
-const primary = "react-tailwind-button--primary";
-const success = "react-tailwind-button--success";
+class Button extends Component {
+    getType(type = 'primary') {
+        return 'react-tailwind-button--' + type;
+    }
 
-function getType(type = 'primary') {
-    if (type === 'primary') {
-        return primary;
-    } else if (type === 'success') {
-        return success;
+    rounded(rounded = false) {
+        return " react-tailwind--rounded-full";
+    }
+
+    outline(outline = false) {
+        if (outline) {
+            return ' react-tailwind--outline';
+        }
+    }
+
+    size(size = 'md') {
+        return ' react-tailwind--' + size;
+    }
+
+
+    render() {
+        return (
+            <button
+                className={this.getType(this.props.type) + this.rounded(this.props.rounded) + this.outline(this.props.outline) + this.size(this.props.size)}
+                type="button">
+                {this.props.children}
+            </button>
+        );
     }
 }
 
-const Button = (props) => (
-    <button
-        className={getType(props.type)}
-        type="button">
-        { props.children }
-    </button>
-);
+Button.propTypes = {
+    type: PropTypes.string,
+    rounded: PropTypes.bool,
+    outline: PropTypes.bool,
+    size: PropTypes.string
+};
 
 export default Button;
