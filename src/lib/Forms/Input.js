@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 
-class Input extends Component {
+class Input extends React.Component {
     render() {
         return (
             <input
