@@ -9,7 +9,7 @@ To install reactjs-tailwind run ``npm install reactjs-tailwind``.
 
 ### Navbar
 
-```
+```javascript
 import { Navbar, NavbarContainer, NavbarLink, Button } from 'reactjs-tailwind';
 
 <Navbar logo={<p>ReactJS Tailwind</p>}>
