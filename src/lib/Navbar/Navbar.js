@@ -25,6 +25,8 @@ class Navbar extends React.Component {
             return 'bg-orange-500';
         } else if (bg === 'danger') {
             return 'bg-red-500';
+        } else {
+            return bg;
         }
     }
 
