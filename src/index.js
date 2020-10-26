@@ -12,7 +12,7 @@ import Button from "./lib/Button/Button";
 function App() {
     return (
         <div>
-            <Navbar logo={<p>ReactJS Tailwind</p>}>
+            <Navbar bg={"primary"} logo={<p>ReactJS Tailwind</p>}>
                 <NavbarContainer>
                     <NavbarLink>Home</NavbarLink>
                     <NavbarLink>Docs</NavbarLink>

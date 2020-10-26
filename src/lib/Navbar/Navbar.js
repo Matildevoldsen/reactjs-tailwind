@@ -30,8 +30,8 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <nav className={"flex w-full flex-col align-baseline justify-between lg:flex-wrap lg:p-6 pt-4 pr-4 pl-4 " + this.getBackground(this.props.bg)}>
-                <div className="flex justify-between min-w-full w-full items-center">
+            <nav className={"shadow " + this.getBackground(this.props.bg)}>
+                <div className="container mx-auto p-4 flex flex-wrap items-center md:flex-no-wrap">
                     <div className="flex lg:w-auto w-1/2 items-center flex-shrink-0 text-white mr-6">
                         {this.props.logo}
                     </div>
@@ -53,9 +53,9 @@ class Navbar extends React.Component {
                         {this.props.children}
                     </div>
                 </div>
-                <div className="lg:hidden w-full">
+                <div className="lg:hidden w-full container mx-auto">
                     <div
-                        className={this.state.showNavbar ? 'opacity-100 translate-x-0 transform ease-in-out transition-all duration-300 pb-4' : 'transform h-0 opacity-0 ease-in-out transition-all duration-300 translate-y-full'}>
+                        className={this.state.showNavbar ? 'block opacity-100 translate-x-0 transform ease-in-out transition-all duration-300 p-4' : 'hidden transform h-0 opacity-0 ease-in-out transition-all duration-300 translate-y-full'}>
                         {this.props.children}
                     </div>
                 </div>
